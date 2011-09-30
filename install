@@ -1,26 +1,22 @@
 #!/bin/bash
 
-readlink_f () {
-  /usr/bin/env python -c "import os,sys;print os.path.realpath(sys.argv[1])" $1
-}
-
 # relink target-file source-file
 relink() {
-  local target=$(readlink_f $2)
-
   if [[ -h "$1" ]]; then
     echo "Relinking $1"
     # Symbolic link? Then recreate.
     rm "$1"
-    ln -sn "$target" "$1"
+    ln -sn "$2" "$1"
   elif [[ ! -e "$1" ]]; then
-    echo "Linking $1 to $target"
-    ln -sn "$target" "$1"
+    echo "Linking $1 to $2"
+    ln -sn "$2" "$1"
   else
     echo "$1 exists as a real file, skipping."
   fi
 }
 
 
-relink ~/.emacs.d .
-relink ~/.emacs ./dot-emacs.el
+DIR=$( cd "$( dirname "$0" )" && pwd )
+
+relink ~/.emacs.d $DIR
+relink ~/.emacs   $DIR/dot-emacs.el
