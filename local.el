@@ -1,5 +1,6 @@
 (setq inhibit-startup-message t)
 
+;; UI widgets
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (unless window-system
   (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))
