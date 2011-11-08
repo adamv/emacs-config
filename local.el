@@ -10,3 +10,7 @@
 ;; Don't auto-indent with tabs by default
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+
+;; Color themes
+(load "themes/color-theme-tomorrow")
+(color-theme-tomorrow-night)
