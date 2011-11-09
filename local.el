@@ -18,3 +18,9 @@
 ;; Color themes
 (load "themes/color-theme-tomorrow")
 (color-theme-tomorrow-night)
+
+;; Key remaps
+;; This does not actually work in console mode, as upper and
+;; lower case keys cannot be differentiated this way.
+(global-set-key (kbd "C-S-v") 'scroll-down)
+(global-set-key (kbd "C-v")   'scroll-up)
