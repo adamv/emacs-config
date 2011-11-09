@@ -10,7 +10,8 @@
 ;; Fonts
 (add-to-list 'default-frame-alist '(font . "DejaVu LGC Sans Mono-10"))
 
-;; Don't auto-indent with tabs by default
+;; Indents
+;; 4 space indents
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
