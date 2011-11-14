@@ -7,6 +7,9 @@
 (unless window-system
   (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))
 
+(setq line-number-mode t)
+(setq column-number-mode t)
+
 ;; Fonts
 (add-to-list 'default-frame-alist '(font . "DejaVu LGC Sans Mono-10"))
 
