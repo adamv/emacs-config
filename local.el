@@ -1,3 +1,9 @@
+;; custom place to save customizations
+;; See: http://www.gnu.org/s/libtool/manual/emacs/Saving-Customizations.html
+(setq custom-file "~/.emacs.d/custom.el")
+(when (file-exists-p custom-file) (load custom-file))
+
+
 (setq inhibit-startup-message t)
 
 ;; UI widgets
