@@ -37,12 +37,16 @@
 (load "themes/color-theme-tomorrow")
 (color-theme-tomorrow-night)
 
+
 ;; Key remaps
-;; These don't work in console mode, only X
+;; Many of these don't work in console mode, only X.
 (global-set-key (kbd "C-S-v") 'scroll-down)
 (global-set-key (kbd "C-v") 'scroll-up)
 (global-set-key [C-home] "\M-<")
-(global-set-key [C-end]  "\M->")
+(global-set-key [C-end] "\M->")
+(global-set-key (kbd "C-S-k") 'delete-region)
+(global-set-key [C-tab] 'other-window)
+
 
 (add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
 (require 'textmate)
