@@ -1,8 +1,16 @@
+;; My stuff
+(add-to-list 'load-path "~/.emacs.d/adamv")
+
+;; Vendorized libraries
+(add-to-list 'load-path "~/.emacs.d/vendor")
+
 ;; custom place to save customizations
 ;; See: http://www.gnu.org/s/libtool/manual/emacs/Saving-Customizations.html
 (setq custom-file "~/.emacs.d/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
 
+
+;; TODO - break these into some separate files I guess
 
 (setq inhibit-startup-message t)
 
@@ -33,10 +41,6 @@
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
-;; Color themes
-(load "themes/color-theme-tomorrow")
-(color-theme-tomorrow-night)
-
 
 ;; Key remaps
 ;; Many of these don't work in console mode, only X.
@@ -48,9 +52,13 @@
 (global-set-key [C-tab] 'other-window)
 
 
-(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+;; Textmate Mode
 (require 'textmate)
 (textmate-mode)
+
+;; Color themes
+(load "themes/color-theme-tomorrow")
+(color-theme-tomorrow-night)
 
 
 ;; don't clutter the workspace with a bunch of backups
