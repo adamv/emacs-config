@@ -7,8 +7,10 @@
 (setq inhibit-startup-message t)
 
 ;; UI widgets
-;; No toolbar
+;; No toolbar or scrollbar
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
 ;; Show menu in GUI mode, but not terminal mode
 (unless window-system
   (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))
