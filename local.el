@@ -21,6 +21,13 @@
 ;; Fonts
 (add-to-list 'default-frame-alist '(font . "DejaVu LGC Sans Mono-10"))
 
+;; Font size
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
+;; Whitepace
+(setq require-final-newline t) ; auto-insert final newlines in all files
+
 ;; Indents
 ;; 4 space indents
 (setq-default tab-width 4)
