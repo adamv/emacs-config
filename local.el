@@ -60,7 +60,6 @@
 (load "themes/color-theme-tomorrow")
 (color-theme-tomorrow-night)
 
-
 ;; don't clutter the workspace with a bunch of backups
 (defvar user-temporary-file-directory
   (concat temporary-file-directory user-login-name "/"))
