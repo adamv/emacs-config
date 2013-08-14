@@ -38,7 +38,7 @@
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
 ;; Whitepace
-(setq require-final-newline t) ; auto-insert final newlines in all files
+;; (setq require-final-newline t) ; auto-insert final newlines in all files
 
 ;; Indents
 ;; 4 space indents
