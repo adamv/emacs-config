@@ -61,9 +61,15 @@
 (require 'textmate)
 (textmate-mode)
 
+
 ;; Color themes
 (load "themes/color-theme-tomorrow")
-(color-theme-tomorrow-night)
+(load "themes/color-theme-solarized")
+;(color-theme-tomorrow-night)
+;(color-theme-solarized-dark)
+(color-theme-solarized-light)
+; TODO - allow changing default theme via ENV var
+
 
 ;; don't clutter the workspace with a bunch of backups
 (defvar user-temporary-file-directory
