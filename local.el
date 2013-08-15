@@ -39,6 +39,7 @@
 
 ;; Whitepace
 ;; (setq require-final-newline t) ; auto-insert final newlines in all files
+(setq-default show-trailing-whitespace t) ; highlight trailing whitespace
 
 ;; Indents
 ;; 4 space indents
