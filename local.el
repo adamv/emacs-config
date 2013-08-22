@@ -30,6 +30,11 @@
 (setq line-number-mode t)
 (setq column-number-mode t)
 
+
+;; Editing
+;; make typing overwrite text selection
+(delete-selection-mode 1) ; this turns on transient-mark-mode automatically
+
 ;; Fonts
 (add-to-list 'default-frame-alist '(font . "DejaVu LGC Sans Mono-10"))
 
