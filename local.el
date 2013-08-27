@@ -88,3 +88,8 @@
 (setq auto-save-file-name-transforms
       `((".*" ,user-temporary-file-directory t)))
 (setq auto-save-default nil)
+
+
+;; Editing - C
+(c-set-offset 'innamespace 0)
+(setq c-basic-offset 4)
