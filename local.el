@@ -31,6 +31,11 @@
 (setq column-number-mode t)
 
 
+;; Textmate Mode
+(require 'textmate)
+(textmate-mode)
+
+
 ;; Editing
 ;; make typing overwrite text selection
 (delete-selection-mode 1) ; this turns on transient-mark-mode automatically
@@ -60,11 +65,6 @@
 (global-set-key [C-end] "\M->")
 (global-set-key (kbd "C-S-k") 'delete-region)
 (global-set-key [C-tab] 'other-window)
-
-
-;; Textmate Mode
-(require 'textmate)
-(textmate-mode)
 
 
 ;; Color themes
