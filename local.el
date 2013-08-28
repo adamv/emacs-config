@@ -90,6 +90,9 @@
 (setq auto-save-default nil)
 
 
+;; File types
+(add-to-list 'auto-mode-alist '("/zshrc$" . sh-mode))
+
 ;; Editing - C
 (c-set-offset 'innamespace 0)
 (setq c-basic-offset 4)
