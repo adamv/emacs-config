@@ -14,18 +14,6 @@
 (load "config/modes")
 
 
-;; Color themes
-; Zenburn
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-
-; Solarized
-(load "themes/color-theme-tomorrow")
-(load "themes/color-theme-solarized")
-;(color-theme-tomorrow-night)
-;(color-theme-solarized-dark)
-
-(color-theme-solarized-light)
-
 ;; don't clutter the workspace with a bunch of backups
 (defvar user-temporary-file-directory
   (concat temporary-file-directory user-login-name "/"))
