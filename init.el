@@ -1,7 +1,5 @@
 ;;; Additional load paths
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/adamv")
-(add-to-list 'load-path "~/.emacs.d/config")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
 ;; custom place to save customizations
@@ -10,12 +8,10 @@
 (when (file-exists-p custom-file) (load custom-file))
 
 
-;; TODO - break these into some separate files I guess
-
-(load-file "~/.emacs.d/config/ui.el")
-(load-file "~/.emacs.d/config/keys.el")
-(load-file "~/.emacs.d/config/editing.el")
-(load-file "~/.emacs.d/config/modes.el")
+(load "config/ui")
+(load "config/keys")
+(load "config/editing")
+(load "config/modes")
 
 
 ;; Fonts
