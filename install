@@ -19,4 +19,3 @@ relink() {
 DIR=$( cd "$( dirname "$0" )" && pwd )
 
 relink ~/.emacs.d $DIR
-relink ~/.emacs   $DIR/dot-emacs.el
