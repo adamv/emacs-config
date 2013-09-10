@@ -66,6 +66,9 @@
 (global-set-key (kbd "C-S-k") 'delete-region)
 (global-set-key [C-tab] 'other-window)
 
+; toggle menu-bar visibility
+(global-set-key (kbd "<f12>") 'menu-bar-mode)
+
 ; f3 in minibuf inserts active buffer's filename
 ; http://stackoverflow.com/questions/455345/in-emacs-how-to-insert-file-name-in-shell-command
 (define-key minibuffer-local-map
