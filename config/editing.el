@@ -4,8 +4,6 @@
 (delete-selection-mode 1) ; this turns on transient-mark-mode automatically
 
 ;;; Whitepace
-;; auto-insert final newlines in all files
-;; (setq require-final-newline t)
 
 ;; highlight trailing whitespace
 (setq-default show-trailing-whitespace t)
@@ -15,9 +13,9 @@
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 
-;; File types
+;;; File types
 (add-to-list 'auto-mode-alist '("/zshrc$" . sh-mode))
 
-;; Editing - C
+;;; Editing - C
 (c-set-offset 'innamespace 0)
 (setq c-basic-offset 4)
