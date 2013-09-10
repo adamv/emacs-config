@@ -14,10 +14,6 @@
 (load "config/modes")
 
 
-;; Fonts
-(add-to-list 'default-frame-alist '(font . "DejaVu LGC Sans Mono-10"))
-
-
 ;; Color themes
 ; Zenburn
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
