@@ -6,6 +6,7 @@
 (load "config/keys")
 (load "config/editing")
 (load "config/modes")
+(load "config/themes")
 
 
 ;; custom place to save customizations
