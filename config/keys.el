@@ -11,9 +11,14 @@
 
 (global-set-key [C-tab] 'other-window)
 
-;; toggle menu-bar visibility
-(if window-system
-  (global-set-key (kbd "<f12>") 'menu-bar-mode))
+(when window-system
+  ;; toggle menu-bar visibility
+  (global-set-key (kbd "<f12>") 'menu-bar-mode)
+
+  ;; No suspend in GUI mode
+  (global-unset-key (kbd "C-x C-z"))
+)
+
 
 ;; Font size
 (define-key global-map (kbd "C-+") 'text-scale-increase)

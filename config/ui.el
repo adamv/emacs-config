@@ -10,10 +10,5 @@
   (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))
 
 
-;; No suspend in GUI mode
-(if window-system
-  (global-unset-key (kbd "C-x C-z")))
-
-
 (setq line-number-mode t)
 (setq column-number-mode t)
