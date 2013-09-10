@@ -12,7 +12,8 @@
 (global-set-key [C-tab] 'other-window)
 
 ;; toggle menu-bar visibility
-(global-set-key (kbd "<f12>") 'menu-bar-mode)
+(if window-system
+  (global-set-key (kbd "<f12>") 'menu-bar-mode))
 
 ;; Font size
 (define-key global-map (kbd "C-+") 'text-scale-increase)
