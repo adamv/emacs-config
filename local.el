@@ -11,23 +11,8 @@
 
 ;; TODO - break these into some separate files I guess
 
-(setq inhibit-startup-message t)
-
-;; UI widgets
-;; No toolbar or scrollbar
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-
-;; Show menu in GUI mode, but not terminal mode
-(unless window-system
-  (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))
-
-(if window-system
-  (global-unset-key (kbd "C-x C-z")))
-
-
-(setq line-number-mode t)
-(setq column-number-mode t)
+(load-file "~/.emacs.d/config/ui.el")
+(load-file "~/.emacs.d/config/keys.el")
 
 
 ;; Textmate Mode
@@ -56,30 +41,6 @@
 (setq-default indent-tabs-mode nil)
 
 
-;; Key remaps
-;; Many of these don't work in console mode, only X.
-(global-set-key (kbd "C-S-v") 'scroll-down)
-(global-set-key (kbd "C-v") 'scroll-up)
-(global-set-key [C-home] "\M-<")
-(global-set-key [C-end] "\M->")
-(global-set-key (kbd "C-S-k") 'delete-region)
-(global-set-key [C-tab] 'other-window)
-
-; toggle menu-bar visibility
-(global-set-key (kbd "<f12>") 'menu-bar-mode)
-
-; f3 in minibuf inserts active buffer's filename
-; http://stackoverflow.com/questions/455345/in-emacs-how-to-insert-file-name-in-shell-command
-(define-key minibuffer-local-map
-  [f3] (lambda () (interactive)
-       (insert (buffer-name (current-buffer-not-mini)))))
-
-(defun current-buffer-not-mini ()
-  "Return current-buffer if current buffer is not the *mini-buffer*
-  else return buffer before minibuf is activated."
-  (if (not (window-minibuffer-p)) (current-buffer)
-      (if (eq (get-lru-window) (next-window))
-          (window-buffer (previous-window)) (window-buffer (next-window)))))
 
 
 ;; Color themes
