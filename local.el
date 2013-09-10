@@ -1,7 +1,6 @@
-;; My stuff
+;;; Additional load paths
 (add-to-list 'load-path "~/.emacs.d/adamv")
-
-;; Vendorized libraries
+(add-to-list 'load-path "~/.emacs.d/config")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
 ;; custom place to save customizations
