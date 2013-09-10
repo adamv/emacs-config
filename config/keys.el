@@ -14,6 +14,10 @@
 ;; toggle menu-bar visibility
 (global-set-key (kbd "<f12>") 'menu-bar-mode)
 
+;; Font size
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
 
 ;; f3 in minibuf inserts active buffer's filename
 ;; http://stackoverflow.com/questions/455345/in-emacs-how-to-insert-file-name-in-shell-command
