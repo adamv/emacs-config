@@ -14,28 +14,11 @@
 (load-file "~/.emacs.d/config/ui.el")
 (load-file "~/.emacs.d/config/keys.el")
 (load-file "~/.emacs.d/config/editing.el")
-
-;; Textmate Mode
-(require 'textmate)
-(textmate-mode)
+(load-file "~/.emacs.d/config/modes.el")
 
 
 ;; Fonts
 (add-to-list 'default-frame-alist '(font . "DejaVu LGC Sans Mono-10"))
-
-
-;; Editing
-;; make typing overwrite text selection
-(delete-selection-mode 1) ; this turns on transient-mark-mode automatically
-
-;; Whitepace
-;; (setq require-final-newline t) ; auto-insert final newlines in all files
-(setq-default show-trailing-whitespace t) ; highlight trailing whitespace
-
-;; Indents
-;; 4 space indents
-(setq-default tab-width 4)
-(setq-default indent-tabs-mode nil)
 
 
 ;; Color themes
@@ -62,11 +45,3 @@
 (setq auto-save-file-name-transforms
       `((".*" ,user-temporary-file-directory t)))
 (setq auto-save-default nil)
-
-
-;; File types
-(add-to-list 'auto-mode-alist '("/zshrc$" . sh-mode))
-
-;; Editing - C
-(c-set-offset 'innamespace 0)
-(setq c-basic-offset 4)
