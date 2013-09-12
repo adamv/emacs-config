@@ -13,3 +13,7 @@
 ;; http://www.gnu.org/s/libtool/manual/emacs/Saving-Customizations.html
 (setq custom-file "~/.emacs.d/custom.el")
 (when (file-exists-p custom-file) (load custom-file))
+
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
