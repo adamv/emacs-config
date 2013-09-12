@@ -1,7 +1,12 @@
-;; autosave to tmp
-(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
-;; no backups
+;; disable auto-save and auto-backup
+(setq auto-save-default nil)
+(setq make-backup-files nil)
 (setq backup-inhibited t)
 
 ;; don't confirm opening non-existant files/buffers
