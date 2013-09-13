@@ -33,6 +33,8 @@
 
 ;; Don't ever make audible sounds.
 (setq visible-bell 't)
+;; Don't flash either
+(setq ring-bell-function 'ignore)
 
 (line-number-mode t)
 (column-number-mode t)
