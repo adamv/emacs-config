@@ -27,6 +27,9 @@
 
 (blink-cursor-mode -1)
 
+;; Don't ever make audible sounds.
+(setq visible-bell 't)
+
 (line-number-mode t)
 (column-number-mode t)
 (size-indication-mode t)
