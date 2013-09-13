@@ -52,8 +52,3 @@
 
 ;; enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
-
-;; Fonts
-(if (string-equal system-type "darwin")
-    (add-to-list 'default-frame-alist '(font . "DejaVu LGC Sans Mono-10"))
-)
