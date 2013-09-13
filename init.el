@@ -21,5 +21,8 @@
 ;; dirtree
 ;; Add dirtree and dependencies to load path
 (add-to-list 'load-path "vendor/dirtree")
-;; Autoload dirtree
-(autoload 'dirtree "dirtree" "Add directory to tree view" t)
+(require 'dirtree)
+
+
+;; Don't use images in tree mode
+(custom-set-variables '(tree-widget-image-enable nil))
