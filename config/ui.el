@@ -25,6 +25,10 @@
 )
 
 
+;; Show tips in minibuffer, not windows
+(tooltip-mode 0)
+
+
 (blink-cursor-mode -1)
 
 ;; Don't ever make audible sounds.
