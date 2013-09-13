@@ -20,7 +20,7 @@
 
 ;; dirtree
 ;; Add dirtree and dependencies to load path
-(add-to-list 'load-path "vendor/dirtree")
+(add-to-list 'load-path "~/.emacs.d/vendor/dirtree")
 (require 'dirtree)
 
 
