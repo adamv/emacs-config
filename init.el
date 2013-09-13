@@ -17,3 +17,9 @@
 (setq frame-title-format
       (list (format "%s %%S: %%j " (system-name))
         '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
+;; dirtree
+;; Add dirtree and dependencies to load path
+(add-to-list 'load-path "vendor/dirtree")
+;; Autoload dirtree
+(autoload 'dirtree "dirtree" "Add directory to tree view" t)
