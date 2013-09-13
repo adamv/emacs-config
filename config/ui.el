@@ -8,6 +8,23 @@
 (unless window-system
   (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))
 
+(unless window-system
+  ;; Enable mouse in terinal mode
+  (require 'mouse)
+  (xterm-mouse-mode t)
+  (defun track-mouse (e))
+  (setq mouse-sel-mode t)
+
+  ;; Enable shift-select in iTerm2
+  (add-hook 'term-setup-hook
+            '(lambda ()
+               (define-key function-key-map "\e[1;9A" [M-up])
+               (define-key function-key-map "\e[1;9B" [M-down])
+               (define-key function-key-map "\e[1;9C" [M-right])
+               (define-key function-key-map "\e[1;9D" [M-left])))
+)
+
+
 (blink-cursor-mode -1)
 
 (line-number-mode t)
