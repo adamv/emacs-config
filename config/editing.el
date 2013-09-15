@@ -4,9 +4,8 @@
 (delete-selection-mode 1) ; this turns on transient-mark-mode automatically
 
 ;;; Whitepace
-
-;; highlight trailing whitespace
-(setq-default show-trailing-whitespace t)
+(global-whitespace-mode t)
+(setq whitespace-style '(face trailing tabs lines-tail tab-mark))
 
 ;; Indents
 ;; 4 space indents
