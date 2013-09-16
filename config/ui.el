@@ -56,3 +56,11 @@
 ;; bigger window
 (add-to-list 'default-frame-alist '(width . 120))
 (add-to-list 'default-frame-alist '(height . 35))
+
+
+;;; mouse wheel scrolling
+;; disable scroll acceleration
+(setq mouse-wheel-progressive-speed nil)
+
+;; scroll two lines per "tick" of the wheel
+(setq mouse-wheel-scroll-speed '(2))
