@@ -41,3 +41,7 @@
 
 ;; Fix forward-delete on X11 on OS X
 (global-set-key [delete] 'delete-forward-char)
+
+
+;; Nagivation
+(global-set-key (kbd "C-l") 'goto-line)
