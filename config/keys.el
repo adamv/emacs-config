@@ -37,3 +37,7 @@
   (if (not (window-minibuffer-p)) (current-buffer)
       (if (eq (get-lru-window) (next-window))
           (window-buffer (previous-window)) (window-buffer (next-window)))))
+
+
+;; Fix forward-delete on X11 on OS X
+(global-set-key [delete] 'delete-forward-char)
