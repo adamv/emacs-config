@@ -5,10 +5,10 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
+;; Things specific to text mode
 (unless window-system
-  (if (fboundp 'menu-bar-mode) (menu-bar-mode -1)))
+  (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-(unless window-system
   ;; Enable mouse in terinal mode
   (require 'mouse)
   (xterm-mouse-mode t)
