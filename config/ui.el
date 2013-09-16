@@ -52,3 +52,7 @@
 
 ;; enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; bigger window
+(add-to-list 'default-frame-alist '(width . 120))
+(add-to-list 'default-frame-alist '(height . 35))
