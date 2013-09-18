@@ -64,3 +64,6 @@
 
 ;; scroll two lines per "tick" of the wheel
 (setq mouse-wheel-scroll-speed '(2))
+
+
+(global-hl-line-mode 1)
