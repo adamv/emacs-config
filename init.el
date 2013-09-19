@@ -22,8 +22,7 @@
 (when (file-exists-p custom-file) (load custom-file))
 
 (setq frame-title-format
-      (list (format "%s %%S: %%j " (system-name))
-        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+      (list '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 
 ;; dirtree
 ;; Add dirtree and dependencies to load path
