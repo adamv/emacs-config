@@ -39,3 +39,6 @@
 (global-set-key (kbd "C-v") 'scroll-up)
 (global-set-key [C-home] "\M-<")
 (global-set-key [C-end] "\M->")
+
+
+(global-set-key (kbd "RET") 'newline-and-indent)
