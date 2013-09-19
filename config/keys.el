@@ -3,11 +3,11 @@
 (when window-system
   ;; toggle menu-bar visibility
   (global-set-key (kbd "<f12>") 'menu-bar-mode)
-
-  ;; No suspend in GUI mode
-  (global-unset-key (kbd "C-x C-z"))
 )
 
+;; Unhook suspend
+(global-unset-key (kbd "C-x C-z"))
+(global-unset-key (kbd "C-z"))
 
 ;; Font size
 (define-key global-map (kbd "C-+") 'text-scale-increase)
