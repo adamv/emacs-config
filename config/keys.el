@@ -44,3 +44,6 @@
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 (global-set-key (kbd "C-z") 'undo)
+
+
+(global-set-key (kbd "C-f") 'find-file)
