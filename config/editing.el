@@ -17,13 +17,13 @@
 
 ;;; Editing - C
 (require 'cc-mode)
-(c-add-style "js"
+(c-add-style "adamv-c-style"
              '("bsd"
                (indent-tabs-mode . nil)
                (c-basic-offset . 4)
                (tab-width . 4)
                (c-continued-statement-offset . 8)))
-(setq c-default-style "js")
+(setq c-default-style "adamv-c-style")
 (add-hook 'c-mode-hook '(lambda () (c++-mode)))
 
 ;; No funny business
