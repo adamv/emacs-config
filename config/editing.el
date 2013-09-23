@@ -26,5 +26,5 @@
 (setq c-default-style "js")
 (add-hook 'c-mode-hook '(lambda () (c++-mode)))
 
-;;(c-set-offset 'innamespace 0)
-;;(setq c-basic-offset 4)
+;; No funny business
+(setq-default c-electric-flag nil)
