@@ -22,7 +22,7 @@
                (indent-tabs-mode . nil)
                (c-basic-offset . 4)
                (tab-width . 4)
-	           (c-continued-statement-offset . 8)))
+               (c-continued-statement-offset . 8)))
 (setq c-default-style "js")
 (add-hook 'c-mode-hook '(lambda () (c++-mode)))
 
