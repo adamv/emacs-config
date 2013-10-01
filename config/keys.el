@@ -2,6 +2,7 @@
 
 (when window-system
   ;; toggle menu-bar visibility
+  (global-set-key (kbd "<f11>") 'scroll-bar-mode)
   (global-set-key (kbd "<f12>") 'menu-bar-mode)
 )
 
