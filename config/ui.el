@@ -26,7 +26,7 @@
 
 
 ;; Show tips in minibuffer, not windows
-(tooltip-mode 0)
+(if (fboundp 'tooltip-mode) (tooltip-mode 0))
 
 
 (blink-cursor-mode -1)
