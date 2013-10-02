@@ -46,5 +46,5 @@
 
 (global-set-key (kbd "C-z") 'undo)
 
-
 (global-set-key (kbd "C-f") 'find-file)
+(global-set-key (kbd "C-t") 'find-file) ; Like TextMate
