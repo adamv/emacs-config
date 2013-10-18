@@ -5,7 +5,7 @@
 
 ;;; Whitepace
 (setq whitespace-style '(face trailing tabs lines-tail tab-mark))
-(setq whitespace-line-column 98)
+(setq whitespace-line-column 79)
 (global-whitespace-mode t)
 
 ;; Indents
