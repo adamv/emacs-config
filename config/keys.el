@@ -33,19 +33,19 @@
 (global-set-key [delete] 'delete-forward-char)
 
 
-;;; Nagivation
-(global-set-key (kbd "C-l") 'goto-line)
 
+;; Nagivation
+(global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "C-S-v") 'scroll-down)
 (global-set-key (kbd "C-v") 'scroll-up)
 (global-set-key (kbd "C-<home>") "\M-<")
 (global-set-key (kbd "C-<end>") "\M->")
 
-
+;; Newlines
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-j") 'newline)
 
-
+;; TODO - on a terminal, need a suspend key
 (global-set-key (kbd "C-z") 'undo)
 
 (global-set-key (kbd "C-f") 'find-file)
