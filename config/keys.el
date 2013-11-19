@@ -54,5 +54,12 @@
 
 
 ;;; Fixes for Cocoa
+;; Match X11 version
 (global-set-key (kbd "<home>") 'move-beginning-of-line)
 (global-set-key (kbd "<end>") 'move-end-of-line)
+
+;; Match other Cocoa apps
+(global-set-key (kbd "<s-left>") 'move-beginning-of-line)
+(global-set-key (kbd "<s-right>") 'move-end-of-line)
+(global-set-key (kbd "<s-up>") 'beginning-of-buffer)
+(global-set-key (kbd "<s-down>") 'end-of-buffer)
