@@ -51,3 +51,8 @@
 
 (global-set-key (kbd "C-f") 'find-file)
 (global-set-key (kbd "C-t") 'find-file) ; Like TextMate
+
+
+;;; Fixes for Cocoa
+(global-set-key (kbd "<home>") 'move-beginning-of-line)
+(global-set-key (kbd "<end>") 'move-end-of-line)
