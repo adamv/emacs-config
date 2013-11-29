@@ -15,6 +15,7 @@
 
 ;;; File types
 (add-to-list 'auto-mode-alist '("/zshrc$" . sh-mode))
+(add-to-list 'auto-mode-alist '("/bashrc$" . sh-mode))
 
 ;;; Editing - C
 (require 'cc-mode)
