@@ -66,3 +66,5 @@
 
 
 (global-set-key [mouse-10] 'kill-this-buffer)
+
+(global-set-key (kbd "<f9>") 'dirtree)
