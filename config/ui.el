@@ -67,3 +67,6 @@
 
 
 (global-hl-line-mode 1)
+
+
+(setq buffers-menu-max-size 30)
