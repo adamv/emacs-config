@@ -6,15 +6,15 @@
                '("melpa" . "http://melpa.milkbox.net/packages/") t))
 
 ;;; Additional load paths
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
-(load "config/ui")
-(load "config/buffers")
-(load "config/editing")
-(load "config/modes")
-(load "config/keys")
-(load "config/themes")
+(load "ui")
+(load "buffers")
+(load "editing")
+(load "modes")
+(load "keys")
+(load "themes")
 
 ;; Save customizations to custom.el, not init.el
 ;; http://www.gnu.org/s/libtool/manual/emacs/Saving-Customizations.html
