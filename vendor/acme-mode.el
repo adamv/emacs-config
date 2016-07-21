@@ -74,7 +74,7 @@ Special commands:
 "
   (interactive)
   (kill-all-local-variables)
-  (setq mode-name "Assembler")
+  (setq mode-name "ACME Assembler")
   (setq major-mode 'acme-mode)
   (setq local-abbrev-table acme-mode-abbrev-table)
   (make-local-variable 'font-lock-defaults)
