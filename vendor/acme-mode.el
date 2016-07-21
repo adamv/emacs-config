@@ -30,12 +30,14 @@
 (if acme-mode-map
     nil
   (setq acme-mode-map (make-sparse-keymap))
-  (define-key acme-mode-map "\C-c\C-c"  'acme-compile)
   (define-key acme-mode-map ":"     'acme-colon)
   (define-key acme-mode-map "\C-c;" 'comment-region)
   (define-key acme-mode-map "\C-i"  'tab-to-tab-stop)
   (define-key acme-mode-map "\C-j"  'acme-newline)
-  (define-key acme-mode-map "\C-m"  'acme-newline))
+  (define-key acme-mode-map "\C-m"  'acme-newline)
+  (define-key acme-mode-map "\C-c\C-c"  'acme-compile)
+  (define-key acme-mode-map "\C-c\C-x"  'acme-emulate)
+)
 
 (defconst acme-font-lock-keywords
   '(
@@ -124,5 +126,10 @@ Special commands:
   (compile
    (format "acme %s"
            (shell-quote-argument (buffer-file-name)))))
+
+(defun acme-emulate ()
+  "emulate the result of the last assembly"
+  (interactive)
+  (start-process "X64" nil "x64" "a.out"))
 
 (provide 'acme-mode)
