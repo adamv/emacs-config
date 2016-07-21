@@ -4,8 +4,8 @@
 (delete-selection-mode 1) ; this turns on transient-mark-mode automatically
 
 ;;; Whitepace
-(setq whitespace-style '(face trailing tabs lines-tail tab-mark))
-(setq whitespace-line-column 79)
+(setq whitespace-style '(face trailing tabs tab-mark))
+(setq whitespace-line-column 78)
 (global-whitespace-mode t)
 
 ;; Indents
