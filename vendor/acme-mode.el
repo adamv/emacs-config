@@ -1,5 +1,6 @@
 ;;;
-;;; acme-mode.el 
+;;; acme-mode.el
+;;; https://github.com/afwlehmann/acme-mode
 ;;;
 ;;; by Alexander Lehmann <afwlehmann@googlemail.com>
 ;;; heavily based on acme-mode.el by abad in 2008 (abad.flt at gmail.com)
@@ -23,7 +24,7 @@
 (if acme-mode-map
     nil
   (setq acme-mode-map (make-sparse-keymap))
-  (define-key acme-mode-map ":"	    'acme-colon)
+  (define-key acme-mode-map ":"     'acme-colon)
   (define-key acme-mode-map "\C-c;" 'comment-region)
   (define-key acme-mode-map "\C-i"  'tab-to-tab-stop)
   (define-key acme-mode-map "\C-j"  'acme-newline)
@@ -45,7 +46,7 @@
     ;; implicit keywords
     (",[xy]" . font-lock-keyword-face)
     ;; built-in commands
-    ("\\([#!]\\sw+\\|else\\|[{}]\\)" 
+    ("\\([#!]\\sw+\\|else\\|[{}]\\)"
      . font-lock-preprocessor-face)
     ;; macro definition
     ("!macro\\s-+\\(\\(\\sw\\|\\s_\\)+\\)"
@@ -54,7 +55,7 @@
     ("\\s-+\\(\\+\\sw+\\)\\s-+"
      (1 font-lock-keyword-face))
     ;; numeric constants
-    ("\\b\\([$0-9][0-9a-fA-F]*\\)" 
+    ("\\b\\([$0-9][0-9a-fA-F]*\\)"
      . font-lock-constant-face))
   "Additional expressions to highlight in Assembler mode.")
 
@@ -94,7 +95,7 @@ Special commands:
   (save-excursion
     (beginning-of-line)
     (if (looking-at "[ \t]+\\(\\sw\\|\\s_\\)+$")
-	(delete-horizontal-space)))
+        (delete-horizontal-space)))
   (insert ":")
   (tab-to-tab-stop))
 
