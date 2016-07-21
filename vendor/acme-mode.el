@@ -11,6 +11,8 @@
 ;;;         based on asm-mode.el by Eric Raymond
 ;;;
 
+(require 'compile nil t)
+
 (defgroup acme nil
   "Mode for editing assembler code."
   :group 'languages)
@@ -28,6 +30,7 @@
 (if acme-mode-map
     nil
   (setq acme-mode-map (make-sparse-keymap))
+  (define-key acme-mode-map "\C-c\C-c"  'acme-compile)
   (define-key acme-mode-map ":"     'acme-colon)
   (define-key acme-mode-map "\C-c;" 'comment-region)
   (define-key acme-mode-map "\C-i"  'tab-to-tab-stop)
@@ -114,5 +117,12 @@ Special commands:
   (save-excursion
     (beginning-of-line)
     (looking-at pattern)))
+
+(defun acme-compile ()
+  "compile the current buffer"
+  (interactive)
+  (compile
+   (format "acme %s"
+           (shell-quote-argument (buffer-file-name)))))
 
 (provide 'acme-mode)
