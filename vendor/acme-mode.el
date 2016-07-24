@@ -55,7 +55,7 @@
     ;; implicit keywords
     (",[xy]" . font-lock-keyword-face)
     ;; built-in commands
-    ("\\([#!]\\sw+\\|else\\|[{}]\\)"
+    ("\\([!]\\sw+\\|else\\|[{}]\\)"
      . font-lock-preprocessor-face)
     ;; macro definition
     ("!macro\\s-+\\(\\(\\sw\\|\\s_\\)+\\)"
