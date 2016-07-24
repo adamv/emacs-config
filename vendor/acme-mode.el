@@ -120,6 +120,11 @@ Special commands:
     (beginning-of-line)
     (looking-at pattern)))
 
+(defun acme-assembly-target ()
+  (if (string-match "!to \"\\(.*\\)\"" (buffer-string))
+      (match-string 1 (buffer-string))
+    "a.out"))
+
 (defun acme-compile ()
   "compile the current buffer"
   (interactive)
@@ -130,6 +135,6 @@ Special commands:
 (defun acme-emulate ()
   "emulate the result of the last assembly"
   (interactive)
-  (start-process "X64" nil "x64" "a.out"))
+  (start-process "X64" nil "x64" (acme-assembly-target)))
 
 (provide 'acme-mode)
