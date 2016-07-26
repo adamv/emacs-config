@@ -50,7 +50,7 @@
     ("^\\(\\.\\(\\sw\\|\\s_\\)+\\)\\>:"
      1 font-lock-function-name-face)
     ;; keywords
-    ("\\s-+\\(lda\\|sta\\|ldx\\|stx\\|ldy\\|sty\\|and\\|ora\\|eor\\|bit\\|cmp\\|cpx\\|cpy\\|adc\\|sbc\\|asl\\|lsr\\|rol\\|ror\\|inc\\|dec\\|jmp\\|jsr\\|brk\\|rts\\|rti\\|php\\|plp\\|pha\\|pla\\|inx\\|dex\\|iny\\|dey\\|tax\\|txa\\|tay\\|tya\\|tsx\\|txs\\|sed\\|cld\\|sei\\|cli\\|sec\\|clc\\|clv\\|beq\\|bne\\|bmi\\|bpl\\|bcc\\|bcs\\|bvc\\|bvs\\|nop\\)\\s-+"
+    ("\\_<\\(lda\\|sta\\|ldx\\|stx\\|ldy\\|sty\\|and\\|ora\\|eor\\|bit\\|cmp\\|cpx\\|cpy\\|adc\\|sbc\\|asl\\|lsr\\|rol\\|ror\\|inc\\|dec\\|jmp\\|jsr\\|brk\\|rts\\|rti\\|php\\|plp\\|pha\\|pla\\|inx\\|dex\\|iny\\|dey\\|tax\\|txa\\|tay\\|tya\\|tsx\\|txs\\|sed\\|cld\\|sei\\|cli\\|sec\\|clc\\|clv\\|beq\\|bne\\|bmi\\|bpl\\|bcc\\|bcs\\|bvc\\|bvs\\|nop\\)\\_>"
      1 font-lock-keyword-face)
     ;; implicit keywords
     (",[xy]" . font-lock-keyword-face)
