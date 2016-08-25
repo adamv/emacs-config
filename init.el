@@ -9,6 +9,9 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
+;; local development
+(add-to-list 'load-path "~/source/acme-mode")
+
 (load "ui")
 (load "buffers")
 (load "editing")
